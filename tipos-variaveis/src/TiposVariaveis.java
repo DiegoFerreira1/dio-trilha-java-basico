@@ -51,6 +51,39 @@ public class TiposVariaveis {
         as aspas simples são usadas para definir caracteres (char), enquanto as aspas duplas são usadas para definir strings. 
         É possivel realizar operações de concatenação, converter numeros em inteiros e diversas outras.
         */ 
+
+        /*
+         Operadores - simbolos especiais com significado próprio para a linguagem e estão
+                      associados a determinadas operações
+            Atribuição - Aritméticos - Unários - Relacionais - Lógicos - Ternário
+
+            Atribuição - simbolo: = --> é utilizado para definir o valor inicial ou sobrescrever o valor de uma variavel.
+            Em Java definimos um tipo, nome e opcionalmente atribuimos um valor à variavel atraves do operador de atribuição.
+            Exemplos de atribuição:
+               String nome = "Gleyson"; 
+               int idade = 22;
+               double peso = 68.5;
+               char sexo = 'M'; //aspa simples por ser unico caractere
+               boolean doadorOrgao = false;
+               Date dataNascimento = new Date();     
+            
+            Aritméticos - é utilizado para realizar operações entre valores numéricos, podendo se tornar ou não
+                           uma expressão mais complexa.
+
+            | + adicção | - subtração | * multiplicação | / divisão | 
+            
+            double soma = 10.5 + 15.7;
+            int subtracao = 113 - 25;
+            int multiplicacao = 20 * 7;
+            int divisao = 15 / 3;
+            int modulo = 18 % 3; // resto da divisão
+            double resultado = (10 * 7) + (20 / 4);
+          
+         */
+
+
+
+
         
      }
 

@@ -1,3 +1,4 @@
+package edu.variaveis;
 public class TiposVariaveis {
     /*
     FAMILIA     |    TIPO PRIMITIVO   |    WRAPPER CLASS    |  TAMANHO

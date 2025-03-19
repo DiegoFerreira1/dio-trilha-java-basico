@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": [
+        "tipos-variaveis/src",
+        "metodos/src/edu/diego/metodos",
+        "java-basico/src",
+        "metodos/src"
+    ]
+}

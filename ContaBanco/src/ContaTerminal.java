@@ -16,7 +16,7 @@ public class ContaTerminal {
         System.out.println("\nAgora preciso que informe Agência: ");
         String agenciaConta = scanner.next();
 
-        scanner.nextLine(); // Corrige problema de captura do nome
+        scanner.nextLine(); 
         System.out.println("\nPor favor, informe seu nome: ");
         String nomeCliente = scanner.nextLine();
 

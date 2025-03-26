@@ -1,4 +1,4 @@
-package condicional;
+package estruturaCondicional;
 
 // Condicional composta --> If e Else
 

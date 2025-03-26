@@ -1,4 +1,4 @@
-package condicional;
+package estruturaCondicional;
 
 // Condicional Encadeada --> If, else if, else
 

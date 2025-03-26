@@ -1,4 +1,4 @@
-package condicional;
+package estruturaCondicional;
 
 public class SwitchCase {
     public static void main(String[] args) {

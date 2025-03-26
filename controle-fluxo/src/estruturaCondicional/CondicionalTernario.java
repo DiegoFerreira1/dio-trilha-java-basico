@@ -1,4 +1,4 @@
-package condicional;
+package estruturaCondicional;
 
 public class CondicionalTernario {
     

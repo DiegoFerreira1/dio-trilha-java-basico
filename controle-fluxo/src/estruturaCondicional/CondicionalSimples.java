@@ -1,4 +1,4 @@
-package condicional;
+package estruturaCondicional;
 
 // Condicional Simples Vai do IF para o print
 

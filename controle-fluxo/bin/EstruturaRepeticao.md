@@ -126,6 +126,8 @@ public static void main(String[] args) {
 1. **Break** significa quebrar, parar, frear, interromper. E é isso que se faz quando o Java encontra esse comando pela frente. 
 2. **Continue**, como o nome diz, ele 'continua' o laço. 
 3. O comando **break** interrompe o laço, já o **continue** interrompe somente a iteração atual.
+4. Se for contagem e a condição for 3 por exemplo, o breck para antes de imprimir a iteração com o 3, imprimindo o valor 2.
+
 
 ```java
 // class ExemploBreakContinue.java
@@ -140,6 +142,7 @@ public class ExemploBreakContinue {
 		
 	}
 	//Qual a saída no console ?
+	// 2 ja que a condição de breack era numero == 3, impedindo sua impressão
 
     }
 }
@@ -165,6 +168,10 @@ public class ExemploBreakContinue {
 
 ## 1.3 While
 O laço **while** (na tradução literal para a língua portuguesa “enquanto”) determina que enquanto uma condição for válida, o bloco de código será executado. O laço **while** testa a condição antes de executar o código, logo, caso a condição seja inválida no primeiro teste o bloco nem será executado.
+
+> Enquanto determinada condição for verdadeira, o código deve ser executado, até que se encontre uma condição que determine que o código seja finalizado, no caso quando a condição for falsa.
+
+![alt text](/src/img/while.png)
 
 **Sintaxe:**
 
@@ -206,6 +213,46 @@ public static void main(String[] args) {
    }
 }
 ```
+
+Exemplo mais simplificado:
+
+```java
+import java.util.Scanner;
+
+
+public class Main {
+  public static void main(String args[]) {
+      int contadorDoces = 1;
+      while (contadorDoces <= 3) {
+          System.out.println(contadorDoces);
+          if (contadorDoces == 3) {
+              System.out.println("Não pode comer mais doces");
+          }
+          contadorDoces++;
+      }
+  }
+}
+
+```
+
+**Vantagens**
+- Simplicidade na utilização;
+- Flexibilidade para realizar o controle das repetições;
+- Ideal para loops inderterminados;
+- Eficiente.
+
+**Desvantagens**
+- Loops infinitos;
+- Menor legibilidade comparado a outras opções existentes;
+- Pode causar alguns bugs
+
+> Exempo de loop infinito
+```java
+while (true) {
+  System.out.println("Looooop!");
+}
+```
+
 
 ## 1.4 Do While
 O laço **do / while** (na tradução literal para a língua portuguesa “faça…enquanto”), assim como o laço while, considera que enquanto uma determinada condição for válida o bloco de código será executado. Entretanto, **do / while** testa a condição após executar o código,sendo assim, mesmo que a condição seja considerada inválida no primeiro teste o bloco será executado pelo menos uma vez.

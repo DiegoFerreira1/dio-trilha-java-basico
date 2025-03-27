@@ -109,9 +109,34 @@ catch(Exception e) {// precisamos saber qual exceção
 
 A linguagem Java dispõe de uma variedade de classes que representam exceções, e estas classes são organizadas em uma hierarquia denominadas **Checked and Unchecked Exceptions** ou Exceções Checadas e Não Checadas.
 
-**RuntimeException** deve ser usada quando a exceção pode ser prevenida. Use ela, indiretamente, quando quer sinalizar para o programador usuário do seu código que ele pode tentar resolver o problema quando esta exceção for lançada. Por causa disto ela é considerada uma exceção não checada ou `unchecked`.
+Em **Java**, as exceções fazem parte da classe base `Throwable`, que se divide em duas principais subclasses:
 
-Para erros que devem ser prevenidos usa-se a **Exception** que é mais genérica e envolve qualquer exceção, inclusive ela pode ser uma **RuntimeException** já que todas as exceções devem ser derivadas de **Exception**.
+1. **`Exception`** → Representa exceções verificadas (**`checked exceptions`**), que devem ser tratadas explicitamente com **`try-catch`** ou declaradas com **`throws`**.
+
+**Exemplo**: `IOException, SQLException`.
+
+2. **`RuntimeException`** → Exceções não verificadas (**`unchecked exceptions`**), que ocorrem em tempo de execução e **não precisam** ser tratadas obrigatoriamente.
+
+**Exemplo**: `NullPointerException, IndexOutOfBoundsException`.
+
+3. **`Error`** → Representa problemas graves do sistema que geralmente não podem ser tratados.
+
+**Exemplo**: `OutOfMemoryError, StackOverflowError`.
+
+![alt text](/src/img/throwable.png)
+
+- **Throwable**  
+  - **Exception**  
+    - IOException  
+    - SQLException  
+    - **RuntimeException**  
+      - NullPointerException  
+      - ArithmeticException  
+  - **Error**  
+    - OutOfMemoryError  
+    - StackOverflowError  
+
+
 
 ![checkUncheck](/src/img/checkUnchek.png)
 
@@ -155,3 +180,49 @@ static String formatarCep(String cep) throws CepInvalidoException{
     }
 ```
 [Referências](https://www.w3schools.com/java/java_try_catch.asp)
+
+## Mais sobre Exceções customizadas
+
+Exceções customizadas em Java são classes que estendem `Exception` (para exceções verificadas) ou `RuntimeException` (para exceções não verificadas). Elas são usadas para representar erros específicos da sua aplicação.
+
+**Como criar uma exceção customizada**
+```java
+// Exceção verificada (checked)
+class MinhaExcecao extends Exception {
+    public MinhaExcecao(String mensagem) {
+        super(mensagem);
+    }
+}
+
+// Exceção não verificada (unchecked)
+class MinhaRuntimeExcecao extends RuntimeException {
+    public MinhaRuntimeExcecao(String mensagem) {
+        super(mensagem);
+    }
+}
+```
+
+**Como usar**
+```java
+public class Teste {
+    public static void main(String[] args) {
+        try {
+            validarIdade(15);
+        } catch (MinhaExcecao e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+    }
+
+    static void validarIdade(int idade) throws MinhaExcecao {
+        if (idade < 18) {
+            throw new MinhaExcecao("Idade mínima é 18 anos.");
+        }
+    }
+}
+```
+
+**Quando usar?**
+
+**Exceções verificadas** (`extends Exception`): quando o erro precisa ser tratado obrigatoriamente.
+
+**Exceções não verificadas** (`extends RuntimeException`): quando o erro pode ocorrer em tempo de execução e não precisa ser tratado obrigatoriamente.

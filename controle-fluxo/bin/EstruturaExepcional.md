@@ -109,6 +109,10 @@ catch(Exception e) {// precisamos saber qual exceção
 
 A linguagem Java dispõe de uma variedade de classes que representam exceções, e estas classes são organizadas em uma hierarquia denominadas **Checked and Unchecked Exceptions** ou Exceções Checadas e Não Checadas.
 
+**RuntimeException** deve ser usada quando a exceção pode ser prevenida. Use ela, indiretamente, quando quer sinalizar para o programador usuário do seu código que ele pode tentar resolver o problema quando esta exceção for lançada. Por causa disto ela é considerada uma exceção não checada ou `unchecked`.
+
+Para erros que devem ser prevenidos usa-se a **Exception** que é mais genérica e envolve qualquer exceção, inclusive ela pode ser uma **RuntimeException** já que todas as exceções devem ser derivadas de **Exception**.
+
 ![checkUncheck](/src/img/checkUnchek.png)
 
 > O que determina uma exceção ser classificado como checada ou não checada ?

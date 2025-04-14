@@ -1,3 +1,5 @@
+package poo;
+
 public abstract class Veiculo {
     private String tipo;
     private String modelo;

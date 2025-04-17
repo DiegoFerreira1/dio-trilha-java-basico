@@ -1,3 +1,5 @@
+package poo;
+
 public class Carro extends Veiculo {
 
     public Carro(String tipo, String modelo, String cor) {
